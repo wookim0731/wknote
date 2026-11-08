@@ -1,6 +1,6 @@
 # wknote
 
-Notebooks for Mac and iPhone that sync through your own iCloud, with an MCP server so Claude on your Mac can save notes into them.
+Notebooks for Mac and iPhone that sync through your own iCloud, with an MCP server so any AI app on your Mac that supports MCP can save notes into them.
 
 ## Support
 
@@ -12,13 +12,19 @@ Questions, bugs and requests: [open an issue](https://github.com/wookim0731/wkno
 
 **Sync.** Sign in to the same iCloud account on your Mac and iPhone. Pages and images sync on their own.
 
-**Claude.** Add the MCP server that ships inside the Mac app:
+**AI apps (MCP).** The Mac app ships a standard MCP server, so any MCP client, such as Claude, Cursor or VS Code, can list, search, read and write your pages. Point your client at:
+
+```
+/Applications/wknote.app/Contents/MacOS/wknote-mcp
+```
+
+In Claude Code, for example:
 
 ```
 claude mcp add wknote /Applications/wknote.app/Contents/MacOS/wknote-mcp
 ```
 
-Then ask Claude to "save this to wknote".
+Then ask your AI to "save this to wknote".
 
 ## Privacy Policy
 
